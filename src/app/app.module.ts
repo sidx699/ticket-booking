@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SelectTicketNumberComponent } from './components/select-ticket-number/select-ticket-number.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { SelectSeatsComponent } from './components/select-seats/select-seats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SelectTicketNumberComponent,
-    LandingComponent
+    LandingComponent,
+    SelectSeatsComponent
   ],
   imports: [
     BrowserModule,
