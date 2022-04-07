@@ -6,17 +6,22 @@ import { AppComponent } from './app.component';
 import { SelectTicketNumberComponent } from './components/select-ticket-number/select-ticket-number.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { SelectSeatsComponent } from './components/select-seats/select-seats.component';
+import { FormsModule } from '@angular/forms';
+import { SigninComponent } from './components/signin/signin.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SelectTicketNumberComponent,
     LandingComponent,
-    SelectSeatsComponent
+    SelectSeatsComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

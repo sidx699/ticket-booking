@@ -7,6 +7,8 @@ import {SelectSeatsComponent} from './components/select-seats/select-seats.compo
 
 const routes: Routes = [
   {path:'', component:LandingComponent},
+  {path: 'hall/:hallname', component:SelectTicketNumberComponent, pathMatch: 'full'},
+  {path: 'noOfTickets/:number', component:SelectSeatsComponent, pathMatch: 'full'},
   {path:'select-ticket-number',component:SelectTicketNumberComponent },
   {path:'select-seats',component:SelectSeatsComponent }
 ];

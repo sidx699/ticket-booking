@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-select-ticket-number',
   templateUrl: './select-ticket-number.component.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectTicketNumberComponent implements OnInit {
 
+  noSeats: number = 1;
   constructor() { }
 
   ngOnInit(): void {
   }
+  
+
 
 }
