@@ -7,12 +7,12 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-async function showData()
+async function showData(dict)
 {
     let returnValue;
     try{
         await client.connect();
-        returnValue = await client.db("ticketbookdb").collection("user").insertOne({ _id: 5,name:"Himadri Bose",phone:"7892100545",email:"hbose@gmail.com",password:"hbo@9800"});
+        returnValue = await client.db("ticketbookdb").collection("boughttickets").insertOne({_id: 1, dict: dict});
     }catch{
         returnValue = "Error";
     }finally{
@@ -21,16 +21,16 @@ async function showData()
     return returnValue;
 }
 
-showData();
 
-// app.get("/api/:name", function(req, res){
+app.get("/boughtticket/:dict", function(req, res){
 
-//     showData(req.params.name).then((data) => {
-//         res.send(data);
-//     });
+    showData(req.params.dict).then((data) => {
+        //res.send(data);
+        console.log("Data Inserted");
+    });
 
-// });
+});
 
-app.listen(3001, function(req, res){
+app.listen(3000, function(req, res){
     console.log("Server running at 3000");
 });

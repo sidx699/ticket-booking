@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient} from '@angular/common/http'; 
 
 
 @Component({
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SelectSeatsComponent implements OnInit {
 
+    url = 'http://localhost:5000/enroll';
     public href: string = "";
     maxSeats: number = 0;
     initSeat: number = 0;
